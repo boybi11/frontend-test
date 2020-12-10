@@ -1,0 +1,181 @@
+.insights {
+    padding: 50px 20px 40px;
+}
+
+.insights__header .title {
+    font-size: 34px;
+}
+
+.insights .insights__grid {
+    margin-top: 25px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.insights .insights__grid::-webkit-scrollbar {
+    display: none;
+}
+
+.insights .insights__grid .card {
+    padding: 25px;
+    background-color: #fff;
+    font-size: 34px;
+    -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+    min-width: 350px;
+}
+
+.insights .insights__grid .card .card__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.insights .insights__grid .card .card__img img {
+    max-width: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.insights .insights__grid .card .card__img::after,
+.insights .insights__grid .card .card__img::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: rotate(45deg) translate(70%);
+        -ms-transform: rotate(45deg) translate(70%);
+            transform: rotate(45deg) translate(70%);
+    z-index: 2;
+}
+
+.insights .insights__grid .card .card__img::before {
+    right: initial;
+    bottom: initial;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(45deg) translate(-70%);
+        -ms-transform: rotate(45deg) translate(-70%);
+            transform: rotate(45deg) translate(-70%);
+}
+
+.insights .insights__grid .card .card__text {
+    margin-top: 22px;
+}
+
+.insights .insights__grid .card:hover > .card__img::before {
+    -webkit-transform: rotate(45deg) translate(-100%);
+        -ms-transform: rotate(45deg) translate(-100%);
+            transform: rotate(45deg) translate(-100%);
+}
+
+.insights .insights__grid .card:hover > .card__img::after {
+    -webkit-transform: rotate(45deg) translate(100%);
+        -ms-transform: rotate(45deg) translate(100%);
+            transform: rotate(45deg) translate(100%);
+}
+
+.insights .insights__grid .card-indigo {
+    border-bottom: 11px solid #1450d2;
+}
+
+.insights .insights__grid .card-indigo .card__text {
+    color: #1450d2;
+}
+
+.insights .insights__grid .card-green {
+    border-bottom: 11px solid #01a49c;
+}
+
+.insights .insights__grid .card-green .card__text {
+    color: #01a49c;
+}
+
+.insights .insights__grid .card-blue {
+    border-bottom: 11px solid #009bfa;
+}
+
+.insights .insights__grid .card-blue .card__text {
+    color: #009bfa;
+}
+
+.insights .insights__dots {
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .insights {
+        background-color: #001a7a;
+        color: #fff;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .insights .insights__header {
+        font-family: interstate;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .insights .insights__header span:last-child {
+        font-weight: bold;
+    }
+
+    .insights .insights__grid .card {
+        min-width: 500px;
+    }
+    .insights .insights__grid > div:first-child  .card {
+        margin-left: 60px;
+    }
+    .insights .insights__grid > div:last-child  .card {
+        margin-right: 60px;
+    }
+
+    .insights .insights__grid .card .card__text {
+        font-size: 25px;
+    }
+    .insights .insights__grid .card.active .card__text  {
+        margin-top: 32px;
+    }
+
+    .insights .insights__grid .card .card__img img {
+        max-height: 150px;
+    }
+    .insights .insights__grid .card.active .card__img img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .insights .insights__grid .card {
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 550px) {
+    .insights .insights__grid .card {
+        min-width: 350px;
+    }
+
+    .insights .insights__grid .card .card__text {
+        font-size: 20px;
+    }
+    .insights .insights__grid > div:first-child  .card {
+        margin-left: 30px;
+    }
+    .insights .insights__grid > div:last-child  .card {
+        margin-right: 30px;
+    }
+}

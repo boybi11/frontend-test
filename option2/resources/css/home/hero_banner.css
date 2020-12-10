@@ -1,0 +1,53 @@
+.hero-banner {
+    color: #fff;
+    background-image: url('../../imgs/hero_banner.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-color: #1a9cf7;
+}
+
+.hero-banner .container {
+    padding-top: 139px;
+    padding-bottom: 139px;
+}
+
+.hero-banner .hero-banner__research-header {
+    display: none;
+    padding: 60px;
+}
+
+.hero-banner__header {
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+
+.hero-banner__sub-txt {
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+    .hero-banner {
+        background-image: none;
+    }
+    
+    .hero-banner .hero-banner__research-header {
+        display: block;
+    }
+
+    .hero-banner .hero-banner__header {
+        background-image: url('../../imgs//dots.png');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        padding-bottom: 30px;
+    }
+
+    .hero-banner .hero-banner__header span:first-child {
+        font-family: helvetica-light;
+        font-size: 26px;
+    }
+
+    .hero-banner .hero-banner__sub-txt {
+        font-size: 26px;
+    }
+}

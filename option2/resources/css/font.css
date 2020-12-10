@@ -1,0 +1,14 @@
+@font-face {
+  font-family: interstate;
+  src: url(../fonts/Interstate-regular.ttf);
+}
+
+@font-face {
+    font-family: interstate-bold;
+    src: url(../fonts/Interstate-bold.ttf);
+}
+
+@font-face {
+    font-family: helvetica-light;
+    src: url(../fonts/helvetica-light.ttf);
+}

@@ -1,0 +1,187 @@
+.events {
+    padding: 50px 20px 40px;
+}
+
+.events__header .title {
+    font-size: 34px;
+}
+.events .events__grid {
+    margin-top: 25px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.events .events__grid::-webkit-scrollbar {
+    display: none;
+}
+
+.events .events__grid > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+}
+.events .events__grid .card {
+    margin-top: 30px;
+    background-color: #1450d2;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.events .events__grid .card .card__date {
+    background-color: #001254;
+    position: relative;
+    display: inline-block;
+    padding: 20px 23px;
+    text-align: center;
+    font-family: interstate;
+    margin-left: 30px;
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+    width: 90px;
+}
+
+.events .events__grid .card .card__date__month {
+    font-size: 16.25px;
+}
+
+.events .events__grid .card .card__date__day {
+    font-size: 36px;
+}
+
+.events .events__grid .card .card__date::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border-bottom: 0px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #3b4e96;
+}
+
+.events .events__grid .card .details {
+    padding: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.events .events__grid .card .details .details__header {
+    font-size: 28px;
+}
+
+.events .events__grid .card .card__button {
+    padding: 0 20px;
+    margin-top: 35px;
+}
+
+.events .events__grid .card .card__location {
+    color: #000;
+    background: #ebebeb;
+    text-align: right;
+    padding: 25px;
+    font-size: 24px;
+    max-width: 93%;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 40px;
+    -webkit-clip-path: polygon(55px 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(55px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 991px) {
+    .events {
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    .events .events__header {
+        font-family: interstate;
+        padding-left: 60px;
+        padding-right: 60px;
+        color: #707070;
+    }
+    .events .events__header .title {
+        color: #001a7a;
+    }
+
+    .events .events__header span:last-child {
+        font-weight: bold;
+    }
+
+    .events .events__grid .card {
+       min-width: 500px;
+       background-color: #001a7a;
+       -webkit-transform: scale(0.9);
+           -ms-transform: scale(0.9);
+               transform: scale(0.9);
+       -webkit-transition: 0.2s;
+       -o-transition: 0.2s;
+       transition: 0.2s;
+    }
+    .events .events__grid .card.active {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+    }
+    .events .events__grid > div:first-child  .card {
+        margin-left: 60px;
+    }
+    .events .events__grid > div:last-child  .card {
+        margin-right: 60px;
+    }
+
+    .events .events__grid .card .card__date {
+        color: #008c82;
+        background-color: #fff;
+    }
+
+    .events .events__grid .card .card__date::after {
+        border-right-color: #c3c3c3;
+    }
+
+    .events .events__grid .card .details .details__message {
+        color: #ccd1e4;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .events .events__grid .card {
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 550px) {
+    .events .events__grid .card {
+        min-width: 350px;
+     }
+     .events .events__grid > div:first-child  .card {
+         margin-left: 30px;
+     }
+     .events .events__grid > div:last-child  .card {
+         margin-right: 30px;
+     }
+}

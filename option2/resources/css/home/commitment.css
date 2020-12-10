@@ -1,0 +1,27 @@
+.commitment {
+    background-image: url('../../imgs/commitment_bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    padding: 116px 0;
+}
+
+.commitment__header {
+    font-size: 40px;
+}
+
+.commitment__message {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.commitment__btn {
+    margin-top: 60px;
+}
+
+@media (max-width: 991px) {
+    .commitment__header {
+        font-weight: bold;
+    }
+}
